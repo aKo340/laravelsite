@@ -30,6 +30,8 @@ class ArticlesController extends SiteController
     {
         //
 
+        $this->title = 'Blogs';
+
         $articles = $this->getArticles($cat_alias);
 
         $content = view(env('THEME').'.articles_content')->with('articles',$articles)->render();

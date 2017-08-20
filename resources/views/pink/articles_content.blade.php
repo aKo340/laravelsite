@@ -38,6 +38,7 @@
         <div class="general-pagination group">
 
             @if($articles->lastPage() > 1)
+                <ul class="pagination">
 
                 @if($articles->currentPage() !== 1)
                     <a href="{{ $articles->url(($articles->currentPage() - 1)) }}">{{ Lang::get('pagination.previous') }}</a>
@@ -54,7 +55,7 @@
                 @if($articles->currentPage() !== $articles->lastPage())
                     <a href="{{ $articles->url(($articles->currentPage() + 1)) }}">{{ Lang::get('pagination.next') }}</a>
                 @endif
-
+                </ul>
 
             @endif
 

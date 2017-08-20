@@ -10,5 +10,9 @@ return [
     'comment_on' => 'Komentāri šim rakstam',
     'post_by' => 'Ieraksti no ',
     'latest_comments' => 'Pēdējie komentāri',
-    'comment_in' => ' komentē '
+    'comment_in' => ' komentē ',
+    'view' => 'Skatīt',
+    'welcom_to' => 'Sveicināti manā protfolio sadaļā',
+    'i_hope' => '... ceru mani darbi Jums patiks',
+    'other_projects' => 'Citi darbi'
 ];
