@@ -179,6 +179,12 @@ return [
         Lar\Providers\RouteServiceProvider::class,
 
         Barryvdh\LaravelIdeHelper\IdeHelperServiceProvider::class,
+
+        Lar\Providers\AnnotationsServiceProvider::class,
+
+        Collective\Html\HtmlServiceProvider::class,
+
+        Intervention\Image\ImageServiceProvider::class,
 		
 		'Lavary\Menu\ServiceProvider',
 
@@ -232,6 +238,11 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 		
 		'Menu'       => 'Lavary\Menu\Facade',
+
+        'Form' => Collective\Html\FormFacade::class,
+        'Html' => Collective\Html\HtmlFacade::class,
+
+        'Image' => Intervention\Image\Facades\Image::class,
 
     ],
 

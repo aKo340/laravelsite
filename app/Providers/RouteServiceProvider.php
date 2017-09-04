@@ -5,6 +5,10 @@ namespace Lar\Providers;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
 
+//use Lar\Article;
+
+
+
 class RouteServiceProvider extends ServiceProvider
 {
     /**
@@ -24,8 +28,13 @@ class RouteServiceProvider extends ServiceProvider
     public function boot()
     {
         //
+        Route::pattern('alias','[\w-]+');
 
         parent::boot();
+
+        Route::bind('articles', function ($value) {
+            return \Lar\Article::where('alias',$value)->first();
+        });
     }
 
     /**

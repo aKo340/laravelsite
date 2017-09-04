@@ -14,5 +14,13 @@ return [
     'view' => 'Skatīt',
     'welcom_to' => 'Sveicināti manā protfolio sadaļā',
     'i_hope' => '... ceru mani darbi Jums patiks',
-    'other_projects' => 'Citi darbi'
+    'other_projects' => 'Citi darbi',
+    'for_contacts' => '... rakstiet, lai iegūtu Jums interesējošo informāciju!',
+    'text' => 'Teksts',
+    'title' => 'Virsraksts',
+    'img' => 'Attēls',
+    'category' => 'Kategorija',
+    'alias' => 'Pseidonīms',
+    'action' => 'Darbība',
+    'added_articles' => 'Pievienotie raksti'
 ];

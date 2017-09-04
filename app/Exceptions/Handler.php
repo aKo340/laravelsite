@@ -32,6 +32,7 @@ class Handler extends ExceptionHandler
      */
     public function report(Exception $exception)
     {
+
         parent::report($exception);
     }
 
@@ -44,6 +45,18 @@ class Handler extends ExceptionHandler
      */
     public function render($request, Exception $exception)
     {
+        if ($this->isHttpException($exception)) {
+            $statusCode = $exception->getStatusCode();
+
+            switch ($statusCode) {
+                case '404' :
+
+                    \Log::alert('Lapa nav atrasta - '. $request->url());
+
+                    return response()->view(env('THEME').'.404',['bar'=>'no','title'=>'Lapa nav atrasta']);
+            }
+        }
+
         return parent::render($request, $exception);
     }
 

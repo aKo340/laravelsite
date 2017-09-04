@@ -39,7 +39,7 @@ class SiteController extends Controller
 
         $menu = $this->getMenu();
 
-        //dd($menu);
+//        dd($menu);
 
         $navigation = view(env('THEME').'.navigation')->with('menu',$menu)->render();
         $this->vars = array_add($this->vars,'navigation',$navigation);
@@ -48,6 +48,12 @@ class SiteController extends Controller
         {
             $rightBar = view(env('THEME').'.rightBar')->with('content_rightBar',$this->contentRightBar)->render();
             $this->vars = array_add($this->vars,'rightBar',$rightBar);
+        }
+
+        if ($this->contentLeftBar)
+        {
+            $leftBar = view(env('THEME').'.leftBar')->with('content_leftBar',$this->contentLeftBar)->render();
+            $this->vars = array_add($this->vars,'leftBar',$leftBar);
         }
 
         $this->vars = array_add($this->vars,'bar',$this->bar);

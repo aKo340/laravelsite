@@ -146,6 +146,18 @@
 
         @endif
 
+    @if(Route::currentRouteName() == 'contacts')
+
+        <!-- START PAGE META -->
+            <div id="page-meta">
+                <div class="inner group">
+                    <h3>{{ Lang::get('lv.for_contacts') }}</h3>
+                </div>
+            </div>
+            <!-- END PAGE META -->
+
+    @endif
+
         <!-- START PRIMARY -->
         <div id="primary" class="sidebar-{{ isset($bar) ? $bar : 'no' }}">
             <div class="inner group">
@@ -156,14 +168,14 @@
                 @yield('bar')
                 <!-- END SIDEBAR -->
                 <!-- START EXTRA CONTENT -->
-                @yield('footer')
+
                 <!-- END EXTRA CONTENT -->
             </div>
         </div>
         <!-- END PRIMARY -->
 
         <!-- START COPYRIGHT -->
-
+        @yield('footer')
         <!-- END COPYRIGHT -->
     </div>
     <!-- END WRAPPER -->
